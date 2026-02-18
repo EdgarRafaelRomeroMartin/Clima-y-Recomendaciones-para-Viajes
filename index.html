@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyGuide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <header>
+        <h1>SkyGuide</h1>
+
+        <div class="search-box">
+            <div style="position: relative; flex: 1;">
+                <input type="text" id="city-input" placeholder="Busca una ciudad..." autocomplete="off">
+                <div id="autocomplete-list" class="autocomplete-items"></div>
+            </div>
+            <button id="search-btn">Buscar</button>
+        </div>
+    </header>
+
+    <main id="weather-card" class="hidden">
+        <h2 id="city-name"></h2>
+        <img id="weather-icon" src="" alt="Clima">
+        <div class="temp" id="temp-display">--°C</div>
+        <p id="weather-desc"></p>
+
+        <button id="fav-btn">⭐ Añadir a favoritos</button>
+
+        <h3>¿Qué hacer hoy?</h3>
+        <div id="recommendations"></div>
+
+        <h3>Próximos días</h3>
+        <div id="forecast-container" class="forecast-grid"></div>
+    </main>
+
+    <section class="favorites-section">
+        <h3>Mis Favoritos</h3>
+        <ul id="fav-list"></ul>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
